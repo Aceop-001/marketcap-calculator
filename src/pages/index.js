@@ -75,8 +75,17 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-black flex items-center justify-center text-white">
-      <div className="bg-gray-900 p-8 rounded-lg shadow-xl w-full max-w-md">
+    <div className="relative min-h-screen flex items-center justify-center">
+      <video
+        autoPlay
+        muted
+        loop
+        className="absolute top-0 left-0 w-full h-full object-cover z-0"
+      >
+        <source src="/my-crypto-loop.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div className="relative z-10 bg-gray-900 bg-opacity-80 p-8 rounded-lg shadow-xl w-full max-w-md">
         <h1 className="text-3xl font-bold mb-6 text-center text-white">
           {isMarketCapMode ? 'Market Cap Calculator' : 'Token Price Calculator'}
         </h1>
